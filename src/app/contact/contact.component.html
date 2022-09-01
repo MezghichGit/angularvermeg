@@ -1,0 +1,34 @@
+<h1 align="center">Formulaire de contact</h1>
+
+<img [src]="universityLogo"/>
+<br/><br/>
+
+<button (click)="eventClick()" class="btn btn-primary">Cliquer ici</button>
+<br/><br/>
+<div [hidden]="isHidden"
+     style="background-color:aliceblue;padding:25px;">
+  <b>Registration Successful!</b>
+  <p>We will email your entry passes to the Louvre Museum in Paris.</p>
+</div>
+
+<form #contactForm="ngForm" (ngSubmit)="sendContact(contactForm)">
+
+  Votre nom : <input type="text" ngModel name="nom" class="form-control"/>
+
+  Votre Moyenne : <input type="text" ngModel name="moy" class="form-control"/>
+
+  <input type="submit" value="Envoyer" class="btn btn-success" />
+</form>
+
+
+<div class="alert alert-success" role="alert" *ngIf="moy>=10">
+  Félicitations, Bonne continuation....
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="moy>0 && moy<10 ">
+  Tu dois travailler plus...Bon courage
+</div>
+
+
+Donner un nombre : <input type="text" [(ngModel)]="nbr"/>
+
+Vous avez taper : {{nbr}}
