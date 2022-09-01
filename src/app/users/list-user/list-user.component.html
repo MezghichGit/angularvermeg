@@ -1,0 +1,12 @@
+<h1 align="center">Liste des Users</h1>
+<table class="table" align="center" border="1">
+
+  <tr><th>ID</th><th>Name</th><th>Username</th><th>Email</th><th>Details</th></tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td><a class="btn btn-warning" routerLink="">Détails</a></td>
+  </tr>
+</table>
