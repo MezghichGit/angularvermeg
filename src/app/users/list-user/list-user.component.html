@@ -7,6 +7,6 @@
     <td>{{user.name}}</td>
     <td>{{user.username}}</td>
     <td>{{user.email}}</td>
-    <td><a class="btn btn-warning" routerLink="">Détails</a></td>
+    <td><a class="btn btn-warning" [routerLink]="['/userDetails',user.id]"> Détails</a></td>
   </tr>
 </table>
