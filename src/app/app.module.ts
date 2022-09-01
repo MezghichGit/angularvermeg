@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PrefixIngPipe } from './pipes/prefix-ing.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrefixIngPipe
   ],
   imports: [
     BrowserModule,
